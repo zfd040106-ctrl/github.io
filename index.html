@@ -3,23 +3,121 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="また - どこかで、また。" />
-    <meta property="og:title" content="また" />
-    <meta property="og:description" content="どこかで、また。" />
+    <meta
+      name="description"
+      content="また - A soft Alpine meadow portfolio inspired by snow mountains, green slopes, wooden cabins, and warm wind."
+    />
+    <meta property="og:title" content="また | mata.city" />
+    <meta
+      property="og:description"
+      content="また、風の中で会いましょう。A gentle Alpine meadow portfolio for visual storytelling and quiet experiments."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/mata-hero.png" />
-    <title>また | どこかで、また。</title>
-    <link rel="preload" href="assets/mata-hero.png" as="image" />
+    <meta name="theme-color" content="#d9f7ff" />
+    <title>また | mata.city</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Nunito:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Yomogi&family=Zen+Maru+Gothic:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="cover" aria-label="また">
-      <img class="cover__image" src="assets/mata-hero.png" alt="" />
-      <div class="cover__light"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="また home">
+        <span>また</span>
+        <strong>mata.city</strong>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-      <section class="cover__content">
-        <h1>また</h1>
-        <p>どこかで、また。</p>
+    <main id="top">
+      <section class="hero">
+        <div class="hero__scene" aria-hidden="true">
+          <div class="sun"></div>
+          <div class="cloud cloud--one"></div>
+          <div class="cloud cloud--two"></div>
+          <div class="mountain mountain--far"></div>
+          <div class="mountain mountain--near"></div>
+          <div class="pine-line"></div>
+          <div class="hill hill--back"></div>
+          <div class="hill hill--front"></div>
+          <div class="meadow-texture"></div>
+          <div class="path"></div>
+          <div class="chalet"></div>
+          <div class="flower-field"></div>
+        </div>
+
+        <div class="hero__text">
+          <p class="kicker">アルプスの草原 / Alpine meadow</p>
+          <h1>また</h1>
+          <p class="subtitle">A gentle portfolio shaped by snow mountains, green slopes, and warm wind.</p>
+          <p class="signature">また、風の中で会いましょう。</p>
+        </div>
+
+      </section>
+
+      <section class="intro section" id="about">
+        <div>
+          <p class="section-label">01 / Philosophy</p>
+          <h2>自然の美, with rounder edges.</h2>
+        </div>
+        <p>
+          This site is designed like a quiet walk above a village: crisp snow in
+          the distance, soft green hills nearby, small flowers underfoot, and
+          enough calm space for each idea to breathe.
+        </p>
+      </section>
+
+      <section class="work section" id="work">
+        <p class="section-label">02 / Creative Fields</p>
+        <div class="work-grid">
+          <article class="work-card work-card--blue">
+            <span>Visual Storytelling</span>
+            <h3>Soft narrative pages with a clear emotional route.</h3>
+          </article>
+          <article class="work-card work-card--green">
+            <span>Mindful UX</span>
+            <h3>Rounded flows, quiet interaction, and generous rhythm.</h3>
+          </article>
+          <article class="work-card work-card--sun">
+            <span>Atmosphere Design</span>
+            <h3>Personal web identities with natural color and gentle motion.</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="gallery section" aria-labelledby="gallery-title">
+        <div class="gallery__header">
+          <p class="section-label">03 / Meadow Notes</p>
+          <h2 id="gallery-title">雪山から草原へ。</h2>
+        </div>
+        <div class="note-row">
+          <div class="note note--mint">Mood: Clear</div>
+          <div class="note note--butter">Sun: Soft</div>
+          <div class="note note--violet">Altitude: 3200m</div>
+          <div class="note note--rose">Flowers: Tiny</div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div>
+          <p class="section-label">04 / Contact</p>
+          <h2>Meet me in the wind.</h2>
+          <p class="contact-copy">
+            For visual stories, soft web experiments, and tiny digital weather
+            systems.
+          </p>
+        </div>
+        <div class="contact-box">
+          <p class="signature">また、風の中で会いましょう。</p>
+          <a class="button" href="mailto:hello@mata.city">hello@mata.city</a>
+        </div>
       </section>
     </main>
   </body>
