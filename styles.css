@@ -446,6 +446,28 @@ p {
   line-height: 1.35;
 }
 
+.hero-badges,
+.micro-weather {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.hero-badges span,
+.micro-weather span {
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: rgba(255, 253, 244, 0.56);
+  box-shadow: 0 10px 28px rgba(43, 73, 91, 0.1);
+  backdrop-filter: blur(14px);
+  color: #40596b;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
 .note {
   border: 1px solid rgba(255, 255, 255, 0.76);
   border-radius: 999px;
@@ -497,6 +519,41 @@ p {
   font-weight: 700;
 }
 
+.intro-card {
+  position: relative;
+  padding: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 36px;
+  background:
+    linear-gradient(145deg, rgba(255, 253, 244, 0.68), rgba(236, 249, 235, 0.58));
+  box-shadow: var(--soft-shadow);
+  backdrop-filter: blur(18px);
+}
+
+.intro-card::before {
+  content: "";
+  position: absolute;
+  top: -42px;
+  right: -34px;
+  width: 150px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(247, 221, 131, 0.42), transparent 70%);
+  pointer-events: none;
+}
+
+.intro-card p {
+  position: relative;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.micro-weather {
+  position: relative;
+  margin-top: 24px;
+}
+
 .work::before {
   inset: -28px auto auto -10vw;
   width: 86vw;
@@ -515,23 +572,59 @@ p {
   margin-top: 30px;
 }
 
+.section-heading {
+  max-width: 780px;
+}
+
 .work-card {
+  position: relative;
   min-height: 260px;
   padding: 26px;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 34px;
   box-shadow: var(--soft-shadow);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.work-card::after {
+  content: "";
+  position: absolute;
+  right: -42px;
+  bottom: -48px;
+  width: 160px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.work-card:hover {
+  box-shadow: 0 24px 54px rgba(43, 73, 91, 0.15);
+  transform: translateY(-5px);
 }
 
 .work-card span {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
-  margin-bottom: 70px;
+  margin-bottom: 56px;
   border-radius: 999px;
   padding: 10px 14px;
   background: rgba(255, 253, 244, 0.62);
   font-family: "Nunito", sans-serif;
   font-size: 0.9rem;
   font-weight: 800;
+}
+
+.work-card h3,
+.work-card p {
+  position: relative;
+  z-index: 1;
+}
+
+.work-card p {
+  margin: 16px 0 0;
+  font-size: 0.98rem;
 }
 
 .work-card--blue {
@@ -569,6 +662,118 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.85fr 0.85fr;
+  gap: 16px;
+}
+
+.bento-card {
+  position: relative;
+  min-height: 150px;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 32px;
+  background: rgba(255, 253, 244, 0.68);
+  box-shadow: var(--soft-shadow);
+  backdrop-filter: blur(18px);
+}
+
+.bento-card::after {
+  content: "";
+  position: absolute;
+  right: -38px;
+  bottom: -44px;
+  width: 130px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.bento-card--wide {
+  min-height: 320px;
+  grid-row: span 2;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.66), transparent 8rem),
+    linear-gradient(145deg, rgba(255, 253, 244, 0.72), rgba(201, 237, 198, 0.62));
+}
+
+.bento-card--wide::before {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 42%;
+  max-width: 190px;
+  aspect-ratio: 1.2;
+  opacity: 0.52;
+  background:
+    linear-gradient(132deg, transparent 0 30%, rgba(255, 255, 255, 0.92) 30.2% 40%, transparent 40.2% 100%),
+    linear-gradient(180deg, #fafdff 0 18%, #bddfe3 18% 100%);
+  clip-path: polygon(0 100%, 26% 48%, 38% 68%, 58% 24%, 74% 72%, 100% 50%, 100% 100%);
+}
+
+.bento-card span {
+  position: relative;
+  z-index: 1;
+  display: block;
+  color: #607789;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.bento-card strong {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-top: 12px;
+  color: var(--ink);
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 0.95;
+}
+
+.bento-card h3,
+.bento-card p {
+  position: relative;
+  z-index: 1;
+}
+
+.bento-card h3 {
+  margin: 28px 0 12px;
+  font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+}
+
+.bento-card p {
+  max-width: 360px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.card-kana {
+  font-family: "Yomogi", cursive;
+  font-size: 1.45rem !important;
+  font-weight: 400 !important;
+}
+
+.bento-card--mint {
+  background: linear-gradient(135deg, #eef9d5, var(--mint));
+}
+
+.bento-card--butter {
+  background: linear-gradient(135deg, #fff8d5, var(--butter));
+}
+
+.bento-card--violet {
+  background: linear-gradient(135deg, #f4f1ff, var(--violet));
+}
+
+.bento-card--rose {
+  background: linear-gradient(135deg, #fff0ef, var(--rose));
 }
 
 .note {
@@ -658,6 +863,15 @@ p {
   .work-grid {
     grid-template-columns: 1fr;
   }
+
+  .bento-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bento-card--wide {
+    grid-column: 1 / -1;
+    min-height: 260px;
+  }
 }
 
 @media (max-width: 620px) {
@@ -679,7 +893,7 @@ p {
   }
 
   .site-header nav a {
-    padding: 9px 14px;
+    padding: 9px 11px;
   }
 
   .hero {
@@ -720,5 +934,39 @@ p {
 
   .work-card span {
     margin-bottom: 48px;
+  }
+
+  .hero-badges,
+  .micro-weather {
+    gap: 8px;
+  }
+
+  .hero-badges {
+    max-width: 330px;
+  }
+
+  .hero-badges span,
+  .micro-weather span {
+    max-width: 100%;
+    padding: 9px 12px;
+    font-size: 0.84rem;
+  }
+
+  .hero-badges span {
+    flex: 0 1 auto;
+  }
+
+  .intro-card {
+    padding: 22px;
+    border-radius: 30px;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-card,
+  .bento-card--wide {
+    min-height: 170px;
   }
 }

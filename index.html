@@ -32,34 +32,26 @@
       <nav aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#work">Work</a>
+        <a href="#notes">Notes</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero">
-        <div class="hero__scene" aria-hidden="true">
-          <div class="sun"></div>
-          <div class="cloud cloud--one"></div>
-          <div class="cloud cloud--two"></div>
-          <div class="mountain mountain--far"></div>
-          <div class="mountain mountain--near"></div>
-          <div class="pine-line"></div>
-          <div class="hill hill--back"></div>
-          <div class="hill hill--front"></div>
-          <div class="meadow-texture"></div>
-          <div class="path"></div>
-          <div class="chalet"></div>
-          <div class="flower-field"></div>
-        </div>
+        <div class="hero__scene" aria-hidden="true"></div>
 
         <div class="hero__text">
           <p class="kicker">アルプスの草原 / Alpine meadow</p>
           <h1>また</h1>
           <p class="subtitle">A gentle portfolio shaped by snow mountains, green slopes, and warm wind.</p>
           <p class="signature">また、風の中で会いましょう。</p>
+          <div class="hero-badges" aria-label="Current atmosphere">
+            <span>Snowline 3200m</span>
+            <span>Grass warm</span>
+            <span>Wildflowers open</span>
+          </div>
         </div>
-
       </section>
 
       <section class="intro section" id="about">
@@ -67,41 +59,71 @@
           <p class="section-label">01 / Philosophy</p>
           <h2>自然の美, with rounder edges.</h2>
         </div>
-        <p>
-          This site is designed like a quiet walk above a village: crisp snow in
-          the distance, soft green hills nearby, small flowers underfoot, and
-          enough calm space for each idea to breathe.
-        </p>
+        <div class="intro-card">
+          <p>
+            This site is designed like a quiet walk above a village: crisp snow in
+            the distance, soft green hills nearby, small flowers underfoot, and
+            enough calm space for each idea to breathe.
+          </p>
+          <div class="micro-weather" aria-label="Portfolio weather">
+            <span>Light: morning</span>
+            <span>Wind: soft</span>
+            <span>Texture: painted</span>
+          </div>
+        </div>
       </section>
 
       <section class="work section" id="work">
-        <p class="section-label">02 / Creative Fields</p>
+        <div class="section-heading">
+          <p class="section-label">02 / Creative Fields</p>
+          <h2>Quiet components, playful rhythm.</h2>
+        </div>
         <div class="work-grid">
           <article class="work-card work-card--blue">
             <span>Visual Storytelling</span>
             <h3>Soft narrative pages with a clear emotional route.</h3>
+            <p>Poster-like composition, calm hierarchy, and natural scene pacing.</p>
           </article>
           <article class="work-card work-card--green">
             <span>Mindful UX</span>
             <h3>Rounded flows, quiet interaction, and generous rhythm.</h3>
+            <p>Small tactile details that feel present without becoming noisy.</p>
           </article>
           <article class="work-card work-card--sun">
             <span>Atmosphere Design</span>
             <h3>Personal web identities with natural color and gentle motion.</h3>
+            <p>Color worlds, typography, and component systems for soft portfolios.</p>
           </article>
         </div>
       </section>
 
-      <section class="gallery section" aria-labelledby="gallery-title">
+      <section class="gallery section" id="notes" aria-labelledby="gallery-title">
         <div class="gallery__header">
           <p class="section-label">03 / Meadow Notes</p>
           <h2 id="gallery-title">雪山から草原へ。</h2>
         </div>
-        <div class="note-row">
-          <div class="note note--mint">Mood: Clear</div>
-          <div class="note note--butter">Sun: Soft</div>
-          <div class="note note--violet">Altitude: 3200m</div>
-          <div class="note note--rose">Flowers: Tiny</div>
+        <div class="bento-grid">
+          <article class="bento-card bento-card--wide">
+            <span class="card-kana">山の光</span>
+            <h3>Snowlight System</h3>
+            <p>Cool highlights, warm shadows, and a misty edge between page sections.</p>
+          </article>
+          <article class="bento-card bento-card--mint">
+            <span>Mood</span>
+            <strong>Clear</strong>
+          </article>
+          <article class="bento-card bento-card--butter">
+            <span>Sun</span>
+            <strong>Soft</strong>
+          </article>
+          <article class="bento-card bento-card--violet">
+            <span>Altitude</span>
+            <strong>3200m</strong>
+          </article>
+          <article class="bento-card bento-card--rose">
+            <span>Flowers</span>
+            <strong>Tiny</strong>
+          </article>
         </div>
       </section>
 
