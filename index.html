@@ -5,141 +5,255 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="また - A soft Alpine meadow portfolio inspired by snow mountains, green slopes, wooden cabins, and warm wind."
+      content="また - An Alpine meadow portfolio shaped by snow, grass, wind, and quiet digital stories."
     />
     <meta property="og:title" content="また | mata.city" />
     <meta
       property="og:description"
-      content="また、風の中で会いましょう。A gentle Alpine meadow portfolio for visual storytelling and quiet experiments."
+      content="また、風の中で会いましょう。A gentle Alpine portfolio for visual stories and thoughtful digital experiences."
     />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#d9f7ff" />
+    <meta name="theme-color" content="#dff3f5" />
     <title>また | mata.city</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23f2d58e'/%3E%3C/svg%3E"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Nunito:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Yomogi&family=Zen+Maru+Gothic:wght@500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&family=Zen+Maru+Gothic:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <header class="site-header">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="また home">
-        <span>また</span>
+        <span class="brand__mark">また</span>
         <strong>mata.city</strong>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#notes">Notes</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-nav-link="about">About</a>
+        <a href="#work" data-nav-link="work">Work</a>
+        <a class="nav-contact" href="#contact" data-nav-link="contact">Contact</a>
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero">
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero__scene" aria-hidden="true"></div>
 
-        <div class="hero__text">
-          <p class="kicker">アルプスの草原 / Alpine meadow</p>
-          <h1>また</h1>
-          <p class="subtitle">A gentle portfolio shaped by snow mountains, green slopes, and warm wind.</p>
-          <p class="signature">また、風の中で会いましょう。</p>
-          <div class="hero-badges" aria-label="Current atmosphere">
-            <span>Snowline 3200m</span>
-            <span>Grass warm</span>
-            <span>Wildflowers open</span>
+        <div class="hero__copy" data-hero-copy>
+          <p class="eyebrow">アルプスの草原 <span>/ Alpine meadow</span></p>
+          <h1 id="hero-title">また</h1>
+          <p class="hero__subtitle">Stories shaped by snowlight, green slopes, and warm wind.</p>
+          <p class="signature"><span>また、風の中で会いましょう。</span></p>
+        </div>
+
+        <div class="atmosphere atmosphere--altitude" data-float="-0.8" aria-label="Altitude 1540 metres">
+          <div class="altimeter">
+            <span>ALT.</span>
+            <strong>1540<small>m</small></strong>
+            <i class="altimeter__needle"></i>
+            <b>△ △</b>
           </div>
         </div>
+
+        <div class="atmosphere atmosphere--wind" data-float="1" aria-label="Gentle breeze">
+          <svg class="wind-mark" viewBox="0 0 42 26" aria-hidden="true">
+            <path d="M2 8C10 3 17 4 24 8C29 11 34 11 40 7" />
+            <path d="M7 17C14 14 20 15 25 18C29 20 33 20 37 18" />
+          </svg>
+          <span>Gentle<br />breeze</span>
+        </div>
+
+        <a class="scroll-cue" href="#about">
+          <span>Take the trail</span>
+          <i aria-hidden="true"></i>
+        </a>
       </section>
 
-      <section class="intro section" id="about">
-        <div>
+      <div class="mist-bridge" aria-hidden="true"></div>
+
+      <section class="philosophy section" id="about" data-nav-section>
+        <div class="philosophy__copy reveal" data-reveal="soft">
           <p class="section-label">01 / Philosophy</p>
-          <h2>自然の美, with rounder edges.</h2>
+          <h2>美しいものをつくり、<br />やさしい未来を描く。</h2>
+          <p>Crafting beauty, designing a kinder tomorrow.</p>
         </div>
-        <div class="intro-card">
-          <p>
-            This site is designed like a quiet walk above a village: crisp snow in
-            the distance, soft green hills nearby, small flowers underfoot, and
-            enough calm space for each idea to breathe.
-          </p>
-          <div class="micro-weather" aria-label="Portfolio weather">
-            <span>Light: morning</span>
-            <span>Wind: soft</span>
-            <span>Texture: painted</span>
+      </section>
+
+      <section class="trail section" id="work" data-nav-section aria-labelledby="work-title">
+        <div class="trail__heading reveal" data-reveal="soft">
+          <p class="section-label">02 / Selected works</p>
+          <h2 id="work-title">歩いてきた、3つの道。</h2>
+          <p>Three trails, many small stories.</p>
+        </div>
+
+        <figure class="terrain-contours" aria-label="Real elevation contours from the Davos region">
+          <img
+            class="terrain-contours__layer terrain-contours__layer--upper"
+            src="assets/davos-contours-v1.png"
+            alt=""
+            width="1536"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            class="terrain-contours__layer terrain-contours__layer--lower"
+            src="assets/davos-contours-v1.png"
+            alt=""
+            width="1536"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>Davos terrain · 100 m intervals · Mapzen / Copernicus EU-DEM</figcaption>
+        </figure>
+
+        <div class="trail-map" aria-hidden="true">
+          <svg class="trail-line" viewBox="0 0 1000 1320" preserveAspectRatio="none">
+            <path
+              class="trail-line__base"
+              d="M80 70 C680 80 875 220 565 360 C195 520 80 575 380 700 C760 855 870 920 590 1060 C505 1105 420 1145 470 1230"
+            />
+            <path
+              class="trail-line__progress"
+              data-trail-path
+              d="M80 70 C680 80 875 220 565 360 C195 520 80 575 380 700 C760 855 870 920 590 1060 C505 1105 420 1145 470 1230"
+            />
+          </svg>
+        </div>
+        <span class="route-token route-token--start" aria-hidden="true">
+          <span class="route-token__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 20V4m0 2h9l-2.5 3L16 12H7" />
+            </svg>
+          </span>
+          <span class="route-token__copy"><small>Start</small><strong>Trailhead 01</strong></span>
+        </span>
+        <span class="route-token route-token--finish" aria-hidden="true">
+          <span class="route-token__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M8 7.5 9.5 5h5L16 7.5h2.5A2.5 2.5 0 0 1 21 10v7a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17v-7a2.5 2.5 0 0 1 2.5-2.5H8Z" />
+              <circle cx="12" cy="13.5" r="3.5" />
+            </svg>
+          </span>
+          <span class="route-token__copy"><small>Arrived</small><strong>Last frame 03</strong></span>
+        </span>
+        <article class="project project--window reveal" data-reveal="left">
+          <figure class="project__visual project-scene project-scene--rail">
+            <div class="project-scene__photo">
+              <img
+                src="assets/alpen-express-real-v1.webp"
+                alt="A Swiss mountain railway curving above a green Alpine valley"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="window-shine" aria-hidden="true"></span>
+            </div>
+            <span class="travel-ticket" aria-hidden="true">
+              <small>ALPEN EXPRESS</small><strong>1ST CLASS</strong>
+            </span>
+          </figure>
+          <div class="project__copy">
+            <span class="project__number project__number--rose">1</span>
+            <p class="project__type">Branding &amp; Website</p>
+            <h3>Alpen Express</h3>
+            <p>スイスの鉄道旅を、もっと特別に。休暇をつなぐブランドサイト。</p>
+            <span class="project__status">Case study soon <span>·</span></span>
           </div>
-        </div>
+        </article>
+
+        <article class="project project--postcard reveal" data-reveal="right">
+          <div class="project__copy">
+            <span class="project__number project__number--sun">2</span>
+            <p class="project__type">Identity &amp; Illustration</p>
+            <h3>Berghütte</h3>
+            <p>山小屋の温もりを、やさしいイラストと静かな色で伝える。</p>
+            <span class="project__status">Case study soon <span>·</span></span>
+          </div>
+          <figure class="project__visual project-scene project-scene--hut">
+            <div class="project-scene__photo">
+              <img
+                src="assets/berghutte-real-v1.webp"
+                alt="A weathered timber mountain hut beneath a rocky Alpine ridge"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <span class="postcard-tape" aria-hidden="true"></span>
+            <span class="postcard-stamp" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M8 33 19 18l7 9 5-6 9 12" />
+                <path d="M8 36h32" />
+              </svg>
+            </span>
+          </figure>
+        </article>
+
+        <article class="project project--specimen reveal" data-reveal="left">
+          <figure class="project__visual project-scene project-scene--summit">
+            <div class="project-scene__photo">
+              <img
+                src="assets/alpine-summit-real-v1.webp"
+                alt="A snow-covered Alpine summit above a cloud inversion at sunrise"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="camera-meta">
+              <span class="camera-meta__camera">
+                <strong>Nikon Z8</strong>
+                <small>Nikkor Z 24–120 mm f/4 S · RAW</small>
+              </span>
+              <span class="camera-meta__readout">
+                <span><small>Focal</small><strong>38 mm</strong></span>
+                <span><small>Aperture</small><strong>f/8</strong></span>
+                <span><small>Shutter</small><strong>1/320 s</strong></span>
+                <span><small>ISO</small><strong>64</strong></span>
+              </span>
+            </figcaption>
+            <span class="paperclip" aria-hidden="true"></span>
+          </figure>
+          <div class="project__copy">
+            <span class="project__number project__number--blue">3</span>
+            <p class="project__type">Web App</p>
+            <h3>Alpine Notes</h3>
+            <p>自然の記憶を、そっと記録する山の日記アプリ。</p>
+            <span class="project__status">Case study soon <span>·</span></span>
+          </div>
+        </article>
       </section>
 
-      <section class="work section" id="work">
-        <div class="section-heading">
-          <p class="section-label">02 / Creative Fields</p>
-          <h2>Quiet components, playful rhythm.</h2>
+      <section class="contact" id="contact" data-nav-section aria-labelledby="contact-title">
+        <div class="contact__air" aria-hidden="true"></div>
+        <div class="contact__copy reveal" data-reveal="rise">
+          <p class="section-label">03 / Contact</p>
+          <h2 id="contact-title"><span>山の向こうで、</span><span>また会いましょう。</span></h2>
+          <p>Let's meet beyond the mountains.</p>
+          <a class="contact__mail" href="mailto:zfd040106@gmail.com">
+            <span>zfd040106@gmail.com</span><i aria-hidden="true">↗</i>
+          </a>
         </div>
-        <div class="work-grid">
-          <article class="work-card work-card--blue">
-            <span>Visual Storytelling</span>
-            <h3>Soft narrative pages with a clear emotional route.</h3>
-            <p>Poster-like composition, calm hierarchy, and natural scene pacing.</p>
-          </article>
-          <article class="work-card work-card--green">
-            <span>Mindful UX</span>
-            <h3>Rounded flows, quiet interaction, and generous rhythm.</h3>
-            <p>Small tactile details that feel present without becoming noisy.</p>
-          </article>
-          <article class="work-card work-card--sun">
-            <span>Atmosphere Design</span>
-            <h3>Personal web identities with natural color and gentle motion.</h3>
-            <p>Color worlds, typography, and component systems for soft portfolios.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="gallery section" id="notes" aria-labelledby="gallery-title">
-        <div class="gallery__header">
-          <p class="section-label">03 / Meadow Notes</p>
-          <h2 id="gallery-title">雪山から草原へ。</h2>
-        </div>
-        <div class="bento-grid">
-          <article class="bento-card bento-card--wide">
-            <span class="card-kana">山の光</span>
-            <h3>Snowlight System</h3>
-            <p>Cool highlights, warm shadows, and a misty edge between page sections.</p>
-          </article>
-          <article class="bento-card bento-card--mint">
-            <span>Mood</span>
-            <strong>Clear</strong>
-          </article>
-          <article class="bento-card bento-card--butter">
-            <span>Sun</span>
-            <strong>Soft</strong>
-          </article>
-          <article class="bento-card bento-card--violet">
-            <span>Altitude</span>
-            <strong>3200m</strong>
-          </article>
-          <article class="bento-card bento-card--rose">
-            <span>Flowers</span>
-            <strong>Tiny</strong>
-          </article>
-        </div>
-      </section>
-
-      <section class="contact section" id="contact">
-        <div>
-          <p class="section-label">04 / Contact</p>
-          <h2>Meet me in the wind.</h2>
-          <p class="contact-copy">
-            For visual stories, soft web experiments, and tiny digital weather
-            systems.
-          </p>
-        </div>
-        <div class="contact-box">
-          <p class="signature">また、風の中で会いましょう。</p>
-          <a class="button" href="mailto:hello@mata.city">hello@mata.city</a>
-        </div>
+        <footer>
+          <span>© 2026 mata.city</span>
+          <div>
+            <a href="mailto:zfd040106@gmail.com">Mail</a>
+            <a href="#top">Back to top ↑</a>
+          </div>
+        </footer>
       </section>
     </main>
   </body>
